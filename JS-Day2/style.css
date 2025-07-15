@@ -1,4 +1,5 @@
 body{
+    background-color: rgb(193, 227, 233);
     text-align: center;
 }
 
@@ -10,4 +11,9 @@ input, select, button{
 
 button{
     cursor: pointer;
+}
+
+#result{
+    font-size: 25px;
+    color: rgb(79, 76, 76);
 }
