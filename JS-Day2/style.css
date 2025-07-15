@@ -7,13 +7,24 @@ input, select, button{
     margin: 10px;
     padding: 10px;
     border-radius: 10px;
+    font-weight: bold;
 }
 
 button{
     cursor: pointer;
+    background-color: rgb(114, 255, 175);
+    font-weight: bold;
 }
 
 #result{
     font-size: 25px;
     color: rgb(79, 76, 76);
+}
+
+.dd:hover{
+    background-color: rgb(197, 218, 255);
+}
+
+.dm:hover{
+    background-color: rgb(211, 176, 129);
 }
