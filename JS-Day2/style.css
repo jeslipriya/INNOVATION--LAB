@@ -12,8 +12,9 @@ input, select, button{
 
 button{
     cursor: pointer;
-    background-color: rgb(114, 255, 175);
+    background-color: #4caf50;
     font-weight: bold;
+    color: white;
 }
 
 #result{
@@ -28,3 +29,4 @@ button{
 .dm:hover{
     background-color: rgb(211, 176, 129);
 }
+    
