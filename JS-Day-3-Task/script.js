@@ -2,7 +2,7 @@ function getNumber(){
     let num1 = Number(prompt("Enter number 1: "));
     let num2 = Number(prompt("Enter number 2: "));
 
-    return {num1, num2};
+    return [num1, num2];
 }
 
 function add(a, b) {
@@ -18,7 +18,7 @@ function mul(a, b) {
 }
 
 function div(a, b) {
-    if(b === o){
+    if(b === 0){
         console.log("Error: Cannot divide by Zero!");
     }
 
@@ -38,7 +38,7 @@ function calculator(){
         console.log("4. Division");
         console.log("5. Exit\n\n");
     
-        let ch = prompt("Enter your option(1,2,3,4,5): ")
+        let ch = Number(prompt("Enter your option(1,2,3,4,5): "));
 
         switch (ch) {
             case 1:
