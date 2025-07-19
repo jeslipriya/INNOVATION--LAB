@@ -28,3 +28,16 @@ for(i=0; i<=N; i++){
 
 console.log("Sum = " + sum);
 
+// printing multiplication table using nested loop
+
+let n = prompt("Enter a number to get it's nultiplication table: ");
+
+if(n == 0){
+    console.log("Multiplication of 0 is 0");
+}
+
+else{
+    for(i=1; i<=10; i++){
+        console.log(i + " X " + n + " = " + (n*i));
+    }
+}
