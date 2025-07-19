@@ -1,8 +1,8 @@
 function getNumber(){
-    let num1 = prompt("Enter number 1: ");
-    let num2 = prompt("Enter number 2: ");
+    let num1 = Number(prompt("Enter number 1: "));
+    let num2 = Number(prompt("Enter number 2: "));
 
-    return num1, num2;
+    return {num1, num2};
 }
 
 function add(a, b) {
@@ -18,7 +18,13 @@ function mul(a, b) {
 }
 
 function div(a, b) {
-    console.log("The result = " + (a/b));
+    if(b === o){
+        console.log("Error: Cannot divide by Zero!");
+    }
+
+    else{
+        console.log("The result = " + (a/b));
+    }
 }
 
 function calculator(){
@@ -32,29 +38,29 @@ function calculator(){
         console.log("4. Division");
         console.log("5. Exit\n\n");
     
-        let ch = prompt("Enter your option(1,2,3,4): ")
+        let ch = prompt("Enter your option(1,2,3,4,5): ")
 
         switch (ch) {
             case 1:
                 console.log("add")
-                add(getNumber());
+                add(...getNumber());
                 break;
 
             case 2:
-                sub(getNumber());
+                sub(...getNumber());
                 break;
 
             case 3:
-                mul(getNumber());
+                mul(...getNumber());
                 break;
 
             case 4:
-                div(getNumber());
+                div(...getNumber());
                 break;
 
             case 5:
                 console.log("Existing the program");
-                break;
+                return;
         
             default:
                 console.log("Invalid Input! Try Again!")
