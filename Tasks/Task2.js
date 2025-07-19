@@ -8,4 +8,11 @@ while (num <=10) {
     num++;
 }
 
-// Getting correct Password until user 
+// Getting correct Password until user inputs correct password using do while loop
+
+let password;
+do {
+    password = prompt("Enter the password: ");
+    
+} while (password !== "PassWord");
+console.log("Access Granted!");
