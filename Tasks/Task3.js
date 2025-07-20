@@ -17,3 +17,18 @@ while (true) {
     }
     num++;
 }
+
+
+// Printing only odd numbers from 1-20 using continue
+
+let n = 20;
+
+for(i=1; i <=20; i++){
+    if(i%2 == 0){
+        continue;
+    }
+
+    else{
+        console.log(i);
+    }
+}
