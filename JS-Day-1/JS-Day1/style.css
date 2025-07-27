@@ -1,0 +1,32 @@
+body{
+    background-color: rgb(193, 227, 233);
+    text-align: center;
+}
+
+input, select, button{
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+button{
+    cursor: pointer;
+    background-color: #4caf50;
+    font-weight: bold;
+    color: white;
+}
+
+#result{
+    font-size: 25px;
+    color: rgb(79, 76, 76);
+}
+
+.dd:hover{
+    background-color: rgb(197, 218, 255);
+}
+
+.dm:hover{
+    background-color: rgb(211, 176, 129);
+}
+    

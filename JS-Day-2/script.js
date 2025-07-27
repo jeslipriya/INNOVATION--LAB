@@ -1,46 +1,27 @@
-function calculate(){
-
-    let num1 = parseInt(document.getElementById("num1").value);
-    let num2 = parseInt(document.getElementById("num2").value);
-    
-    let operation = document.getElementById("operation").value;
-    
-    let result;
+let target = Math.floor(Math.random()*100)+1;
+let count =0;
+let result;
 
 
-    if(isNaN(num1) || isNaN(num2)){
-        let result = "Enter the valid number";
+console.log(target);
+
+function playGame(){
+
+    let num = parseInt(document.getElementById("num").value);
+    count ++;
+    if (target == num){
+        result = "You Guesses Correct!";
     }
 
     else{
-        switch (operation) {
-            case "add":
-                result = num1 + num2;
-                break;
-
-            case "sub":
-                result = num2 - num1;
-                break;
-
-            case "mul":
-                result = num1 * num2;
-                break;
-
-            case "div":
-                if(num2 == 0){
-                    result = "Error: cannot divide by Zero!";
-                    break;
-                }
-
-                else{
-                    result = num1 / num2;
-                }
-        
-            default:
-                break;
+        if(num > target){
+            result = "Too high!";
+        }
+        else if(num < target) {
+            result= "Too low!";
         }
     }
 
-    document.getElementById("result").innerText = "Result is" + " " + result;
-
+    document.getElementById("feedback").innerText = result
+    document.getElementById("attempts").innerText = "Total Atempts = " + " " + count;
 }
