@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Text Analyzer</title>
+    <script src="script.js"></script>
+
+    <style>
+        body {
+            text-align: center;
+       }
+
+        textarea {
+            font-size: 16px;
+        }
+
+        button {
+            font-size: 16px;
+            padding: 8px 16px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Mini Text Analyzer</h1><br><br>
+
+    <textarea id="paragraph" cols="60" rows="6" placeholder="Enter the paragraph"></textarea> <br><br>
+    <button type="submit" onclick="textAnalyzer()">Analyze</button>
+    <pre id="result"></pre>
+</body>
+</html>
