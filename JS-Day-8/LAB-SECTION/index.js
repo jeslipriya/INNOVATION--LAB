@@ -38,6 +38,7 @@ class Bank{
 let res1 = new Bank(1000);
 let res2 = new Bank(2000);
 let res3 = new Bank(3000);
+
 console.log(res1);
 console.log(res2);
 console.log(res3);
