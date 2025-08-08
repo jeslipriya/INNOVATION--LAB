@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+
+    <style>
+        body{
+            text-align: center;
+        }
+        .error{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Form Validation</h1>
+
+    <form action="" onsubmit="return validateForm()">
+        <label for="name">Username</label>
+        <input type="text" name="name" id="name">
+        <div id="nameError" class="error"></div> <br><br>
+       
+        <label for="phno">Phone Number</label>
+        <input type="text" name="phno" id="phno">
+        <div id="numberError" class="error"></div><br><br>
+       
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email">
+        <div id="emailError" class="error"></div><br><br>
+       
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password">
+        <div id="passwordError" class="error"></div><br><br>
+
+        <button type="submit">Validate</button>
+    </form>
+</body>
+</html>
