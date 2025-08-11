@@ -6,7 +6,7 @@ function validateName(name){
     }
 
     if (!regex.test(name)) {
-        return "name can only contain "
+        return "name can only contain alphabets"
     }
 
     return "Name is valid";
