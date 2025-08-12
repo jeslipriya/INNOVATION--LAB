@@ -47,7 +47,7 @@ function validatePassword(password){
         return "Password can't be null";
     }
 
-    if (!regex.test(phno)) {
+    if (!regex.test(password)) {
         return "Must be atleast 9 characters"
     }
 
