@@ -21,7 +21,7 @@ let contact = [
     }
 ];
 
-const {name, phone, email} = contact;
+const {name, phone, email} = contact[0];
 console.log(`(Destructured) ${name} , ${phone} , ${email}`);
 
 console.log(contact.name);
@@ -53,4 +53,31 @@ addContacts(
     }
 );
 
+contacts.forEach(contact => contact.displayInfo());
+
+let moreContacts1 = [
+    {
+        name: "Charlie",
+        phone: 7654321098,
+        email: "charlie@gmail.com",
+        displayInfo() {
+            console.log(`Name: ${this.name}, Phone Number: ${this.phone}, Email id: ${this.email}`);
+        }
+    }
+];
+
+let moreContacts2 = [
+    {
+        name: "Daisy",
+        phone: 6543210987,
+        email: "daisy@gmail.com",
+        displayInfo() {
+            console.log(`Name: ${this.name}, Phone Number: ${this.phone}, Email id: ${this.email}`);
+        }
+    }
+];
+
+contacts = [...contacts, ...moreContacts1, ...moreContacts2];
+
+console.log("\nAll Contacts:");
 contacts.forEach(contact => contact.displayInfo());
