@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Watch</title>
+
+    <style>
+        @font-face {
+            font-family: 'Digital7';
+            src: url('digital-7.ttf') format('truetype');
+        }
+
+        body {
+            text-align: center;
+            background-color: #000;
+            color: #0f0;
+           /* text-shadow: 0 0 10px #0f0, 0 0 20px #0f0;*/
+           
+        }
+
+        .clock {
+            font-family: 'Digital7', monospace;
+            font-size: 50px;
+            font-weight: normal;
+            letter-spacing: 5px;
+            display: inline-block;
+            padding: 20px 40px;
+            border: 3px solid #0f0;
+            border-radius: 10px;
+            background-color: rgba(0, 0, 0, 0.6);
+            box-shadow: 0 0 20px #0f0;
+            text-shadow: 0 0 10px #0f0, 0 0 20px #0f0;
+        }
+
+
+        h1{
+            font-family: 'Digital7';
+            font-size: 45px;
+            letter-spacing: 3px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Digital Clock</h1>
+    <div id="clock" class="clock">Loading...</div>
+
+    <script>
+        function UpdateClock(){
+            const now = new Date();
+
+            let hours = now.getHours();
+            const mins = now.getMinutes();
+            const secs = now.getSeconds();
+
+            const ampm = hours >=12 ? 'PM' : 'AM';
+
+            hours = hours % 12;
+            hours = hours ? hours : 12;
+
+            const hh = String(hours).padStart(2, '0');
+            const mm = String(mins).padStart(2, '0');
+            const ss = String(secs).padStart(2, '0');
+
+            const timeString = `${hh}:${mm}:${ss} ${ampm}`;
+            document.getElementById("clock").innerText = timeString;
+        }
+
+        UpdateClock();
+        setInterval(UpdateClock, 1000);
+    </script>
+</body>
+</html>
