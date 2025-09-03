@@ -20,6 +20,9 @@ let result = new Example("Jesli")
 
 // getter and setter
 
+// set is used for updating the value
+// get is used for extracting the value
+
 class Bank{
     constructor(initialAmount = 0){
         this._initialAmount = initialAmount;
