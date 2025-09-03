@@ -1,0 +1,64 @@
+<!-- stop Watch -->
+
+<!-- / => minutes, % => seconds  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stop Watch</title>
+
+    <style>
+        body{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript Digital Stop Watch</h1> <br><br>
+
+    <div id="display">00:00</div> <br><br>
+
+    <button class="btn" onclick="Start()">Start</button>
+    <button class="btn" onclick="Stop()">Stop</button>
+    <button class="btn" onclick="Restart()">Restart</button>
+
+
+    <script>
+
+        let seconds = 0; // starts the timer
+        let intervalId = null; //
+
+        function UpdateDisplay() {
+            let mins = String(Math.floor(seconds/60)).padStart(2, "0");
+            let secs = String(seconds % 60).padStart(2, "0");
+
+            document.getElementById("display").innerText = `${mins}:${secs}`
+        }
+        function Start() {
+            if(!intervalId){
+                intervalId = setInterval(() => {
+                    seconds++;
+                    UpdateDisplay();
+
+                },1000)
+            }
+           
+        }
+
+        function Stop() {
+            clearInterval(intervalId);
+            intervalId = null;
+           
+        }
+
+        function Restart() {
+            Stop();
+            seconds = 0;
+            UpdateDisplay();
+           
+        }
+    </script>
+</body>
+</html>

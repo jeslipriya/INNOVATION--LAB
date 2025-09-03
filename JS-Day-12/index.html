@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+</head>
+<body>
+    <div id="byId">byId</div>
+
+    <div class="container">Class1</div>
+    <div class="container">Class2</div>
+    <div class="container">Class3</div>
+
+    <script>
+        document.getElementById("byId").innerText = "Hello World!";
+        let idEle = document.getElementById("byId").style.color = "green";
+
+        document.getElementsByClassName("container")[0].innerText = "This is class 1";
+        document.getElementsByClassName("container")[1].innerText = "This is class 2";
+        document.getElementsByClassName("container")[2].innerText = "This is class 3";
+
+        let cls = document.getElementsByClassName("container");
+
+        cls[0].style.color = "blue";
+        cls[1].style.color = "orange";
+       
+       
+       
+
+    </script>
+</body>
+</html>
